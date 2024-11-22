@@ -1,0 +1,21 @@
+{% extends 'layouts/nav.html' %}
+
+{% block content %}
+<h1>Tareas de {{ materia }}</h1>
+<section>
+    <h2>Tienes mas tareas?</h2>
+    <a class="dir" href="{% url 'newTask' materia.id %}">Crear nueva tarea</a>
+    <a class="dir" href="{% url 'subject' %}">Volver</a>
+</section>
+{% for task in tasks %}
+<div>
+    <h2>{{ task.name }}</h2>
+    <p>
+        Descripcion<br>
+        {{ task.descripcion }}
+    </p>
+</div>
+{% endfor %}
+<h2>Descargar Tareas</h2>
+<a href="{% url 'download' materia.id %}">👇</a>
+{% endblock %}

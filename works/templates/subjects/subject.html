@@ -1,0 +1,22 @@
+{% extends 'layouts/nav.html' %}
+
+{% block content %}
+<h1>Materias</h1>
+<div class="subjects">
+    <section>
+        <a class="dir" href="{% url 'newSubject' %}">Agregar Materia</a>
+    </section>
+    {% for subject in subjects %}
+    <a class="card" href="{% url 'task' subject.id %}">
+        <div>
+            <h2>{{ subject.name }}</h2>
+            <p>
+                Descripcion<br>
+                {{ subject.descripcion }}
+            </p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

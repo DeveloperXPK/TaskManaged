@@ -1,0 +1,9 @@
+{% extends 'layouts/nav.html' %}
+{% block content %}
+<h1>Nueva tarea de {{ materia.name }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Crear</button>
+</form>
+{% endblock %}

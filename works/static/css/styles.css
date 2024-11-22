@@ -1,0 +1,46 @@
+body {
+    background-color: #312c2cd3;
+    color: #fff
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+.dir{
+    background-color: rgb(26, 117, 110);
+    padding: 10px;
+    margin: 5px;
+}
+
+.dir:hover {
+    background-color: rgb(54, 192, 181);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.subjects {
+    display: flex;
+}
+
+.subjects .card {
+    text-decoration: none;
+    color: #000;
+}
+
+.subjects div {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subjects div:hover {
+    background-color: #2d9bc7e5;
+}
